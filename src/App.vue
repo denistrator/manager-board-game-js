@@ -1,26 +1,21 @@
 <template>
-  <div>
-    {{name}}
-  </div>
+    <div>
+        {{name}}
+    </div>
 </template>
 
 <script lang="ts">
-  import Vue from "vue";
+    import Vue from "vue";
 
-  export default Vue.extend({
-    data: function() {
-      return {
-        name: 'Hello World!',
-      }
-    },
-  });
+    export default Vue.extend({
+        data: function () {
+            return {
+                name: 'Hello World!',
+            }
+        },
+    });
 </script>
 
 <style lang="scss">
-$primary-color: white;
-$bg: black;
-body {
-  color: $primary-color;
-  background-color: $bg;
-}
+    @import 'app.scss';
 </style>

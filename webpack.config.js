@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: './src/index.js',
@@ -43,7 +44,12 @@ const config = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/index.html',
+      filename: './index.html' //relative to root of the application
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

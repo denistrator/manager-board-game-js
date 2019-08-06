@@ -1,19 +1,16 @@
 <template>
-    <div>
-        {{name}}
-    </div>
+    <Board/>
 </template>
 
 <script lang="ts">
-    import Vue from "vue";
+    import Board from './components/Board/Board.vue';
 
-    export default Vue.extend({
-        data: function () {
-            return {
-                name: 'Hello World!',
-            }
-        },
-    });
+    export default {
+        name: "Manager",
+        components: {
+            Board
+        }
+    };
 </script>
 
 <style lang="scss">
